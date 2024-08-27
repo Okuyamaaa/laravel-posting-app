@@ -27,7 +27,7 @@ class PostController extends Controller
         $post = new Post();
         $post->title = $request->input("title");
         $post->content = $request->input("content");
-        $post->updated_at=$request->input("updated_at");
+        // $post->updated_at=$request->input("updated_at");
         $post->user_id = Auth::id();
         $post->save();
 
@@ -46,7 +46,7 @@ class PostController extends Controller
     }
     $post->title = $request->input("title");
     $post->content = $request->input("content");
-    $post->updated_at=$request->input("updated_at");
+    // $post->updated_at=$request->input("updated_at");
     $post->save();
     
     return redirect()->route('posts.show', $post)->with('flash_message', '投稿を編集しました。');
