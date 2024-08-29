@@ -15,8 +15,8 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', [PostController::class, "index"])->middleware(["auth", "verified"])->name("posts.index");
-// Route::get('/', [PostController::class, "index"])->middleware(["auth", "verified"]);
+// Route::get('/', [PostController::class, "index"])->middleware(["auth", "verified"])->name("posts.index");
+Route::get('/', [PostController::class, "index"])->middleware(["auth", "verified"]);
 
 
 // Route::get('/dashboard', function () {
